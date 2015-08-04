@@ -3,6 +3,9 @@ Upload json data into `Pure Data` projects via api.
 
 ## Getting started
 1. Clone this repo
+1. Either
+ 1. Create a virtualenv with python3 as interpreter and then ```pip install -r requirements.txt``` **or**
+ 2. Install package `requests` for your python3 interpreter
 1. Put **json file** into created directory
 1. Get your **auth_token** from ax semantics
 1. Find or create your appropriate content project and remember its **number**
@@ -15,6 +18,7 @@ Upload json data into `Pure Data` projects via api.
  ```
 1. Save that file
 1. Execute `upload-file.py` in your preferred fashion (cli, from IDE, make executable and double-click...)
+ - Mind that this tool requires python3!
 
 ## Tips and Tricks
 
