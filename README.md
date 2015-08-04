@@ -6,7 +6,7 @@ Upload json data into `Pure Data` projects via api.
 1. Put **json file** into created directory
 1. Get your **auth_token** from ax semantics
 1. Find or create your appropriate content project and remember its **number**
-1. Open cfg.py and set up the variables:
+1. Open `cfg.py` and set up the variables:
 
  ```python
  auth_token = '1234567890abcdef1234567890abcdef12345678'
