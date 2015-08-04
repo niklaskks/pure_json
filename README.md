@@ -3,7 +3,7 @@ Upload json data into `Pure Data` projects via api.
 
 ## Getting started
 1. Clone this repo
-1. Put json **file into** created directory
+1. Put **json file** into created directory
 1. Get your **auth_token** from ax semantics
 1. Find or create your appropriate content project and remember its **number**
 1. Open cfg.py and set up the variables:
