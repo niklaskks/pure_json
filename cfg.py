@@ -3,10 +3,10 @@
 auth_token = ''
 
 # this file must be in the script's directory, no path allowed
-file_name = 'billiger-werkzeuge.json'
+file_name = 'wichtige-daten.json'
 
 # this is the number shown in the URL for the content project
-content_project_id = 2288
+content_project_id = 19191919119
 
 # set to True to see some more output
 DEBUG = False
