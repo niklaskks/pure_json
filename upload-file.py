@@ -8,6 +8,6 @@ from run import proceed
 if __name__ == '__main__':
     try:
         setup(file_name, auth_token, content_project_id)
-        proceed(file_name, max_count=3)
+        proceed(file_name)
     except AssertionError as e:
         print(e)
