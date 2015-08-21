@@ -1,5 +1,7 @@
 # pure_json
-Upload json data into `Pure Data` projects via api.
+Upload data into `ATML3Developer` and `Pure Data` projects via api.
+
+Source files can be json or csv.
 
 ## Getting started
 1. Clone this repo
