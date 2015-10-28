@@ -28,6 +28,7 @@ Source files can be json, csv or xslx.
 1. Put your **xslx file** into the `json_extractor` directory
 2. Open `json_extractor/config.py` and set the required variables to map .xslx column names to key names.
 3. Set the `IMPORT_UNCONFIGURED` variable to `False` to only import fields specified in the `LAYOUT` dict.
+4. Run `excel_extractor.py /path/to/file.xslx`
 
 ## Tips and Tricks
 
