@@ -152,3 +152,7 @@ tramp
 # cask packages
 .cask/
 
+# don't commit user data
+*.csv
+*.json
+*.xslx
