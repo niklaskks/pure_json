@@ -26,7 +26,7 @@ def normalize_key(key):
     key = key.strip()
     key = re.sub(r'A-Za-z0-9_', '', key)
     key = key.title()
-    return key
+    return key.replace(' ','')
 
 
 if __name__ == '__main__':
@@ -62,7 +62,7 @@ if __name__ == '__main__':
                 if xslx_key in ['uid', 'name']:
                     thing[xslx_key] = xslx_value
                 else:
-                    thing['pure_data'][xslx_key] = xslx_value
+                    thing['pure_data'][normalize_key(xslx_key)] = xslx_value
 
         things.append(thing)
 
