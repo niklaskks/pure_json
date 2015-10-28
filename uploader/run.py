@@ -90,4 +90,9 @@ def _get_selectors(data) -> selector:
         uid = data.get('uid')
         return selector(name, uid)
 
+    if 'uid' in keys and 'name' in keys and 'pure_data' in keys:
+        name = data.get('name')
+        uid = data.get('uid')
+        return selector(name, uid)
+
     raise ValueError('Cannot determine selectors from {}'.format(data))
