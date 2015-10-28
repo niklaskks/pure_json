@@ -39,30 +39,21 @@ if __name__ == '__main__':
     sheet = xslx.parse(0)
 
     for index, row in sheet.iterrows():
-        thing = {'pure_data':{}}
+        thing = {}
 
         for xslx_key in row.keys():
             if xslx_key in LAYOUT.keys():
                 json_key = LAYOUT[xslx_key]
-                #xslx_value = row[xslx_key].values()[0]
                 xslx_value = row[xslx_key]
 
-                if json_key in ['uid', 'name']:
-                    thing[json_key] = xslx_value
-                elif '%splitdata' in json_key:
+                if '%splitdata' in json_key:
                     separators = json_key.split(' ')
-                    thing['pure_data'].update(splitdata(
-                        separators[1],
-                        separators[2],
-                        xslx_value
-                    ))
+                    thing.update(splitdata(separators[1], separators[2], xslx_value))
                 else:
-                    thing['pure_data'][json_key] = xslx_value
+                    thing[json_key] = xslx_value
+
             elif IMPORT_UNCONFIGURED:
-                if xslx_key in ['uid', 'name']:
-                    thing[xslx_key] = xslx_value
-                else:
-                    thing['pure_data'][normalize_key(xslx_key)] = xslx_value
+                thing[normalize_key(xslx_key)] = xslx_value
 
         things.append(thing)
 
