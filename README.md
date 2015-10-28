@@ -1,17 +1,19 @@
 # pure_json
-Upload data into `ATML3Developer` and `Pure Data` projects via api.
+Convert and upload data into `ATML3Developer` and `Pure Data` projects via the API.
 
-Source files can be json or csv.
+Source files can be json, csv or xslx.
 
-## Getting started
+## Getting Started
 1. Clone this repo
 1. Either
  1. Create a virtualenv with python3 as interpreter and then ```pip install -r requirements.txt``` **or**
- 2. Install package `requests` for your python3 interpreter
-1. Put **json file** into created directory
+ 2. Install all packages named in `requirements.txt`
+
+## Upload Data
+1. Put your **json file** into the `upload` directory
 1. Get your **auth_token** from ax semantics
 1. Find or create your appropriate content project and remember its **number**
-1. Open `cfg.py` and set up the variables:
+1. Open `upload/cfg.py` and set up the variables:
 
  ```python
  auth_token = '1234567890abcdef1234567890abcdef12345678'
@@ -19,8 +21,13 @@ Source files can be json or csv.
  content_project_id = 99999999999999
  ```
 1. Save that file
-1. Execute `upload-file.py` in your preferred fashion (cli, from IDE, make executable and double-click...)
- - Mind that this tool requires python3!
+1. Execute `uploader/upload-file.py` in your preferred fashion (cli, from IDE, make executable and double-click...)
+ - Keep in mind that this tool requires python3!
+
+## Convert .xslx to .json
+1. Put your **xslx file** into the `json_extractor` directory
+2. Open `json_extractor/config.py` and set the required variables to map .xslx column names to key names.
+3. Set the `IMPORT_UNCONFIGURED` variable to `False` to only import fields specified in the `LAYOUT` dict.
 
 ## Tips and Tricks
 
