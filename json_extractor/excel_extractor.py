@@ -42,9 +42,10 @@ if __name__ == '__main__':
         thing = {}
 
         for xslx_key in row.keys():
+            xslx_value = row[xslx_key]
+
             if xslx_key in LAYOUT.keys():
                 json_key = LAYOUT[xslx_key]
-                xslx_value = row[xslx_key]
 
                 if '%splitdata' in json_key:
                     separators = json_key.split(' ')
