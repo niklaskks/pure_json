@@ -23,7 +23,8 @@ def splitdata(row_separator, value_separator, field):
 
 
 def splitlist(separator, field, key):
-    return {key: field.split(separator)}
+    data = [element.strip() for element in field.split(separator)]
+    return {key: data}
 
 
 def normalize_key(key):
