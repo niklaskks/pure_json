@@ -22,6 +22,10 @@ def splitdata(row_separator, value_separator, field):
     return data
 
 
+def splitlist(separator, field, key):
+    return {key: field.split(separator)}
+
+
 def normalize_key(key):
     key = key.strip()
     key = re.sub(r'A-Za-z0-9_', '', key)
@@ -50,6 +54,11 @@ if __name__ == '__main__':
                 if '%splitdata' in json_key:
                     separators = json_key.split(' ')
                     thing.update(splitdata(separators[1], separators[2], xslx_value))
+
+                elif '%splitlist' in json_key:
+                    separator = json_key.split(' ')[-1]
+                    thing.update(splitlist(separator, xslx_value, xslx_key))
+
                 else:
                     thing[json_key] = xslx_value
 

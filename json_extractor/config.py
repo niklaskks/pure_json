@@ -6,4 +6,5 @@ LAYOUT = {
     "MPID": "uid",
     "Title English": "name",
     "Specification": "%splitdata ~ :",
+    "Sizes": "%splitlist ~",
 }
